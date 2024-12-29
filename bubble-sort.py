@@ -17,7 +17,7 @@ def bubble_sort(data: list, mode: str = "nd") -> list:
     """
     if mode not in ("nd", "ni"):
         raise ValueError("Invalid mode. Choose 'nd' or 'ni'.")
-    
+    data = list(data) # ensures original list remains unchanged
     unsorted = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
 
     swaps = 1
@@ -40,5 +40,5 @@ if __name__ == "__main__":
     print("Sorted list (non-increasing): ", sorted_list_backwards)
 
 
-    name = "Fabian"
-    bubble_sort(name)
+    name = "Fabian Andres Cortes"
+    print(bubble_sort(name))
