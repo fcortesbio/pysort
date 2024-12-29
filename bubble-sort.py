@@ -3,7 +3,7 @@
 # if we determine that they're in the wrong order (i.e., the first is greater than the second), we'll swap them round; 
 # if the order is valid, we'll do nothing. 
 
-def bubble_sort(list_: list)-> list:
+def bubble_sort(data: list)-> list:
     """Sorts a list in a non-decreasing order using the bubble sort algorithm.
     Args: 
         list_: The list to be sorted
@@ -13,11 +13,11 @@ def bubble_sort(list_: list)-> list:
     swaps = 1
     while swaps > 0:
         swaps = 0 
-        for i, item in enumerate(list_[:-1]):
-            if item > list_[i+1]:
+        for i, item in enumerate(data[:-1]):
+            if item > data[i+1]:
                 swaps += 1
-                list_[i], list_[i+1] = list_[i+1], list_[i];
-    return list_
+                data[i], data[i+1] = data[i+1], data[i];
+    return data
 
 example_list = [8, 10, 6, 2]
 print("Example list: ", example_list)
