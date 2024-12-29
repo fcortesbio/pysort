@@ -13,10 +13,10 @@ def bubble_sort(list_: list)-> list:
     swaps = 1
     while swaps > 0:
         swaps = 0 
-        for i in range(len(list)-1):
-            if list[i] > list[i+1]:
+        for i, item in enumerate(list_[:-1]):
+            if item > list_[i+1]:
                 swaps += 1
-                list[i], list[i+1] = list[i+1], list[i];
+                list_[i], list_[i+1] = list_[i+1], list_[i];
     return list
 
 example_list = [8, 10, 6, 2]
