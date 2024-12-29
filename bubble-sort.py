@@ -23,4 +23,3 @@ example_list = [8, 10, 6, 2]
 print("Example list: ", example_list)
 sorted_list = bubble_sort(example_list)
 print("Sorted list: ", sorted_list)
-repr(sorted_list)
