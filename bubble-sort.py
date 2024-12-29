@@ -1,4 +1,4 @@
-def bubble_sort(data: list, mode="nd") -> list:
+def bubble_sort(data: list, mode: str = "nd") -> list:
     """Sorts a list using the bubble sort algorithm.
 
     Args:
