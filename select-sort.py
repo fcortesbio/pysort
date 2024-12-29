@@ -1,4 +1,9 @@
+
+
+
 def select_sort(data: list, mode: str = "nd")-> list:
+    if mode not in ("nd", "ni"):
+        raise ValueError
     return data
 
 if __name__ == "__main__":

@@ -1,5 +1,7 @@
+
 def bubble_sort(data: list, mode: str = "nd") -> list:
-    """Sorts a list using the bubble sort algorithm.
+    """
+    Sorts a list using the bubble sort algorithm.
 
     Args:
         data: The list to be sorted.
@@ -15,26 +17,18 @@ def bubble_sort(data: list, mode: str = "nd") -> list:
     """
     if mode not in ("nd", "ni"):
         raise ValueError("Invalid mode. Choose 'nd' or 'ni'.")
+    
+    unsorted = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
 
     swaps = 1
-    if mode == "nd":
-        while swaps > 0:
-            swaps = 0
-            for i, item in enumerate(data[:-1]):
-                if item > data[i + 1]:
-                    swaps += 1
-                    data[i], data[i + 1] = data[i + 1], data[i]
-            if swaps == 0: 
-                break  
-    elif mode == "ni":
-        while swaps > 0:
-            swaps = 0
-            for i, item in enumerate(data[:-1]):
-                if item < data[i + 1]:
-                    swaps += 1
-                    data[i], data[i + 1] = data[i + 1], data[i]
-            if swaps == 0:
-                break  
+    while swaps > 0:
+        swaps = 0
+        for i, item in enumerate(data[:-1]):
+            if unsorted(item, data[i+1]):
+                swaps += 1
+                data[i], data[i + 1] = data[i + 1], data[i]
+        if swaps == 0: 
+            break  
     return data
 
 if __name__ == "__main__":
