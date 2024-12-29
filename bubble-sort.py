@@ -38,3 +38,7 @@ if __name__ == "__main__":
     print("Sorted list (non-decreasing): ", sorted_list)
     sorted_list_backwards = bubble_sort(example_list, "ni")
     print("Sorted list (non-increasing): ", sorted_list_backwards)
+
+
+    name = "Fabian"
+    bubble_sort(name)
