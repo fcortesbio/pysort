@@ -3,7 +3,6 @@
 # if we determine that they're in the wrong order (i.e., the first is greater than the second), we'll swap them round; 
 # if the order is valid, we'll do nothing. 
 
-
 def bubble_sort(list_: list)-> list:
     """Sorts a list in a non-decreasing order using the bubble sort algorithm.
     Args: 
