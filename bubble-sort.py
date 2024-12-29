@@ -6,7 +6,7 @@
 def bubble_sort(data: list)-> list:
     """Sorts a list in a non-decreasing order using the bubble sort algorithm.
     Args: 
-        list_: The list to be sorted
+        data: The list to be sorted
     Returns: 
         The sorted list.
     """
@@ -19,7 +19,8 @@ def bubble_sort(data: list)-> list:
                 data[i], data[i+1] = data[i+1], data[i];
     return data
 
-example_list = [8, 10, 6, 2]
-print("Example list: ", example_list)
-sorted_list = bubble_sort(example_list)
-print("Sorted list: ", sorted_list)
+if __name__ == "__main__":
+    example_list = [8, 10, 6, 2]
+    print("Example list: ", example_list)
+    sorted_list = bubble_sort(example_list)
+    print("Sorted list: ", sorted_list)
