@@ -37,3 +37,5 @@ if __name__ == "__main__":
     print("Sorted list (non-decreasing): ", sorted_list)
     sorted_list_backwards = select_sort(example_list, "ni")
     print("Sorted list (non-increasing): ", sorted_list_backwards)
+    name = "Scarlet"
+    print("Scarlet, but sorted: ", select_sort(name))

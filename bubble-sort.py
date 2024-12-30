@@ -1,4 +1,3 @@
-# evaluate 
 def bubble_sort(data: iter, mode: str = "nd") -> list:
     """
     Sorts a list using the bubble sort algorithm.
@@ -36,5 +35,5 @@ if __name__ == "__main__":
     print("Sorted list (non-decreasing): ", sorted_list)
     sorted_list_backwards = bubble_sort(example_list, "ni")
     print("Sorted list (non-increasing): ", sorted_list_backwards)
-    name = "Fabian Andres Cortes"
-    print(bubble_sort(name))
+    name = "Scarlet"
+    print("Scarlet, but sorted: ", bubble_sort(name))
