@@ -1,6 +1,7 @@
 # My Python Collection of Sorting Algorithms
 
-This repository contains a collection of sorting algorithms implemented in Python. This project was created as practice for the TalentoTech bootcamp.
+This repository contains a collection of sorting algorithms implemented in Python. 
+This project was created as practice for the TalentoTech bootcamp.
 
 ## Sorting Algorithms
 
@@ -35,14 +36,14 @@ This repository contains a collection of sorting algorithms implemented in Pytho
 
 ## How to Use
 
-1. Clone the repository: `git clone https://github.com/your-username/sorting-algorithms.git`
-2. Navigate to the directory: `cd sorting-algorithms`
-3. Run any of the Python files to see the sorting algorithms in action (e.g., `python bubble-sort.py`)
+1. Clone the repository: `git clone https://github.com/fcortesbio/pysort`
+2. Navigate to the directory: `cd pysort`
+3. Run any of the Python files to see the sorting algorithms in action (e.g., `python3 bubble-sort.py`)
 
 ## Contributing
 
 Contributions are welcome! If you'd like to add a new sorting algorithm or improve an existing one, feel free to submit a pull request.
 
-## License
+<!-- ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. -->
