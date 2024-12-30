@@ -1,5 +1,5 @@
-
-def bubble_sort(data: list, mode: str = "nd") -> list:
+# evaluate 
+def bubble_sort(data: iter, mode: str = "nd") -> list:
     """
     Sorts a list using the bubble sort algorithm.
 
@@ -20,15 +20,13 @@ def bubble_sort(data: list, mode: str = "nd") -> list:
     data = list(data) # ensures original list remains unchanged
     unsorted = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
 
-    swaps = 1
-    while swaps > 0:
-        swaps = 0
-        for i, item in enumerate(data[:-1]):
-            if unsorted(item, data[i+1]):
-                swaps += 1
+    swaps = True
+    while swaps:
+        swaps = False
+        for i in range(len(data)-1):
+            if unsorted(data[i], data[i+1]):
                 data[i], data[i + 1] = data[i + 1], data[i]
-        if swaps == 0: 
-            break  
+                swaps = True
     return data
 
 if __name__ == "__main__":
@@ -38,7 +36,5 @@ if __name__ == "__main__":
     print("Sorted list (non-decreasing): ", sorted_list)
     sorted_list_backwards = bubble_sort(example_list, "ni")
     print("Sorted list (non-increasing): ", sorted_list_backwards)
-
-
     name = "Fabian Andres Cortes"
     print(bubble_sort(name))
