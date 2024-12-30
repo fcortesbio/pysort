@@ -14,9 +14,11 @@ def bubble_sort(data: iter, mode: str = "nd") -> list:
     Raises:
         ValueError: If an invalid mode is provided.
     """
-    if mode not in ("nd", "ni"):
-        raise ValueError("Invalid mode. Choose 'nd' or 'ni'.")
     data = list(data) # ensures original list remains unchanged
+    
+    if mode not in ("nd", "ni"):
+        raise ValueError("Mode must be 'nd' for non-decreasing or 'ni' for non-increasing")
+    
     unsorted = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
 
     swaps = True

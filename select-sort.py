@@ -20,22 +20,22 @@ def select_sort(data: iter, mode: str = "nd") -> list:
     compare = (lambda current, value: current > value) if mode == "nd" else (lambda current, value: current < value)
 
     for i in range(len(data)):
-        min_index = i
+        first_index = i
         for j in range(i + 1, len(data)):
-            if compare(data[min_index], data[j]):
-                min_index = j
+            if compare(data[first_index], data[j]):
+                first_index = j
 
-        if min_index != i:
-            data[i], data[min_index] = data[min_index], data[i]  # Swap local minimum with first unsorted item
+        if first_index != i:
+            data[i], data[first_index] = data[first_index], data[i]  # Swap local minimum with first unsorted item
 
     return data
 
 if __name__ == "__main__":
-    example_list = [8, 10, 6, 2, 4]
+    example_list = [8, 10, 6, 2, 4, 12]
     print("Example list: ", example_list)
     sorted_list = select_sort(example_list)
-    print("Sorted list (non-decreasing): ", sorted_list)
-    sorted_list_backwards = select_sort(example_list, "ni")
-    print("Sorted list (non-increasing): ", sorted_list_backwards)
-    name = "Scarlet"
-    print("Scarlet, but sorted: ", select_sort(name))
+    # print("Sorted list (non-decreasing): ", sorted_list)
+    # sorted_list_backwards = select_sort(example_list, "ni")
+    # print("Sorted list (non-increasing): ", sorted_list_backwards)
+    # name = "Scarlet"
+    # print("Scarlet, but sorted: ", select_sort(name))
