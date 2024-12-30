@@ -1,7 +1,3 @@
-# find the smallest element
-# exchange with the first unordered element
-# repeat until the full list is sorted
-
 def select_sort(data: iter, mode: str = "nd") -> list:
     """
     Sorts a list using the selection sort algorithm.
@@ -10,7 +6,6 @@ def select_sort(data: iter, mode: str = "nd") -> list:
         data (list): The list to sort.
         mode (str): Sorting mode, "nd" for non-decreasing (ascending),
                     "ni" for non-increasing (descending).
-
     Returns:
         list: The sorted list.
 
@@ -24,9 +19,6 @@ def select_sort(data: iter, mode: str = "nd") -> list:
 
     compare = (lambda current, value: current > value) if mode == "nd" else (lambda current, value: current < value)
 
-    print("Original list: ", data)
-    print("Sorting mode:", "Non-decreasing" if mode == "nd" else "Non-increasing")
-
     for i in range(len(data)):
         min_index = i
         for j in range(i + 1, len(data)):
@@ -34,8 +26,7 @@ def select_sort(data: iter, mode: str = "nd") -> list:
                 min_index = j
 
         if min_index != i:
-            data[i], data[min_index] = data[min_index], data[i]  # Swap
-            print(f"Swapped elements at indices {i} and {min_index}: {data}")
+            data[i], data[min_index] = data[min_index], data[i]  # Swap local minimum with first unsorted item
 
     return data
 
