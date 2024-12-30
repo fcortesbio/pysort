@@ -1,6 +1,7 @@
 def bubble_sort(data: iter, mode: str = "nd") -> list:
     """
     Sorts a list using the bubble sort algorithm.
+    Repeatedly steps through the list, compares adjacent elements, and swaps them if unsorted. 
 
     Args:
         data: The list to be sorted.
