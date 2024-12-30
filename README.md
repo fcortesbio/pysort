@@ -1,6 +1,6 @@
 # My Python Collection of Sorting Algorithms
 
-This repository contains a collection of sorting algorithms implemented in Python. 
+This repository contains a collection of sorting algorithms implemented in Python.
 This project was created as practice for the TalentoTech bootcamp.
 
 ## Sorting Algorithms
