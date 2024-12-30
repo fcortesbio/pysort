@@ -19,13 +19,13 @@ def bubble_sort(data: iter, mode: str = "nd") -> list:
     if mode not in ("nd", "ni"):
         raise ValueError("Mode must be 'nd' for non-decreasing or 'ni' for non-increasing")
     
-    unsorted = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
+    swap_needed = (lambda x, y: x > y) if mode == "nd" else (lambda x, y: x < y)
 
     swaps = True
     while swaps:
         swaps = False
         for i in range(len(data)-1):
-            if unsorted(data[i], data[i+1]):
+            if swap_needed(data[i], data[i+1]):
                 data[i], data[i + 1] = data[i + 1], data[i]
                 swaps = True
     return data
